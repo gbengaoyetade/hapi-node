@@ -2,7 +2,7 @@ import { Server, Request, ResponseToolkit } from "@hapi/hapi";
 
 const init = async () => {
     const server: Server = new Server({
-        port: 3000,
+        port: process.env.PORT || 8080,
         host: 'localhost'
     });
     server.route({
@@ -15,6 +15,7 @@ const init = async () => {
     await server.start();
     console.log('server running on %s', server.info.uri);
 };
+
 process.on('unhandledRejection', (err) => {
     console.log(err);
     process.exit(1);
