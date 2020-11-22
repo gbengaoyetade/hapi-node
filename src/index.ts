@@ -3,7 +3,7 @@ import { Server, Request, ResponseToolkit } from "@hapi/hapi";
 const init = async () => {
     const server: Server = new Server({
         port: process.env.PORT || 8080,
-        host: 'localhost'
+        host: '0.0.0.0'
     });
     server.route({
         method: 'GET',

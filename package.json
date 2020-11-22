@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon -e ts  --exec \"yarn run compile\"",
-    "compile": "tsc && node ./dist/index.js"
+    "compile": "tsc"
   },
   "dependencies": {
     "@hapi/hapi": "^20.0.2",
